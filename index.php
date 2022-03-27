@@ -45,7 +45,7 @@ if(isset($_COOKIE['id'])){
 
 
 
-    }elseif(!empty($user)&& $user['id']=21){
+    }elseif(!empty($user)&& $user['email']="admin@gmail.com"){
         echo'Bienvenido: '.$user['email'].'<br>';
         echo'<br>Te has logeado correctamente <br>';
         echo'<a href="admin.php">Ver información como admin</a>';
