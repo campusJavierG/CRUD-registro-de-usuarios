@@ -5,10 +5,11 @@ require_once('database.php');
 $message='';
 
 if(!empty($_POST['email'])&& !empty($_POST['password'] && !empty($_POST['password2']))){
-    $sql="INSERT INTO users (nombre,email,password) values (:nombre,:email,:password) ";
+    $sql="INSERT INTO users (nombre,email,password,photo) values (:nombre,:email,:password,:photo) ";
     $stmt= $conn->prepare($sql);
     $stmt->bindParam(':nombre',$_POST['name']);
     $stmt->bindParam(':email',$_POST['email']);
+    $stmt->bindParam(':photo',$_POST['photo']);
     $password=password_hash($_POST['password'],PASSWORD_BCRYPT);
     $stmt->bindParam(':password',$password);
     if($stmt->execute()){
@@ -17,8 +18,8 @@ if(!empty($_POST['email'])&& !empty($_POST['password'] && !empty($_POST['passwor
         $message="ha ocurrido un error con la contraseña";
     }
 }
-else{
-    $message="Ha ocurrido un error, revisa que has rellenado todos los campos";
+elseif(empty($_POST['password']) or empty($_POST['password2']) or empty($_POST['email'])){
+    $message="Rellena todos los campos";
 }
 
 ?>

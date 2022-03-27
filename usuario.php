@@ -38,12 +38,13 @@ if($id==21){
     <th>Contraseña</th>
 </thead>
 <tbody>
+
     <?php
 
     foreach($arrDatos as $muestra){
         echo '<tr>';
 
-        echo '<td >' . $muestra['photo'] . '</td>';
+        echo '<td ><img width="120px" height="90px" src="' . $muestra['photo'] . '"></td>';
         echo '<td >' . $muestra['id'] . '</td>';
         echo '<td >' . $muestra['nombre'] . '</td>';
         echo '<td >' . $muestra['email'] . '</td>';
