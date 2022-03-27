@@ -40,7 +40,6 @@ if($id==21){
 <tbody>
 
     <?php
-
     foreach($arrDatos as $muestra){
         echo '<tr>';
 
