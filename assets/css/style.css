@@ -1,0 +1,49 @@
+body{
+    margin: 150px;
+    padding: 0;
+    font-family: 'Red Hat Mono', monospace;    
+    text-align: center;
+    background-color: #F4FCD9;
+}
+table{
+    align-self: center;
+}
+
+input[type="text"],input[type="password"]{
+    outline: none;
+    padding: 18px;
+    display: block;
+    width: 300px;
+    border-radius: 8px;
+    border:1px solid #C5D8A4;
+    margin: 20px auto;
+}
+input[type="submit"]{
+    padding: 12px;
+    width: 150px;
+    color: #534340;
+    background:#BB9981;
+    margin: 20px auto;
+    margin-top: 0px;
+    border:0px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color:rgb(194, 169, 121);
+    transition: 0.3s;
+}
+
+header{
+    border-bottom: 2.5px solid #534340;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+
+}
+
+header a{
+    text-decoration: none;
+    color: #534340;
+}
