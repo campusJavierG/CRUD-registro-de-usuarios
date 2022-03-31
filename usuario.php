@@ -1,4 +1,5 @@
 <?php
+require_once('partials/header.php');
 require_once('database.php');
 $id=$_COOKIE['id'];
 $busqueda= $conn->prepare('SELECT * FROM users where id=:id');
@@ -60,7 +61,11 @@ if($id==21){
 </tbody>
 </table>
 <br>
-<a href="logout.php">Logout</a>
+
+<a href="eliminar.php">Eliminar datos</a><br>
+<a href="update.php">Update</a><br>
+<a href="logout.php">Logout</a><br>
+
 
 </body>
 </html>

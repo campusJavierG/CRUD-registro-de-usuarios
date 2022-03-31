@@ -1,4 +1,5 @@
 <?php
+require_once('partials/header.php');
 require_once('database.php');
 $id=$_COOKIE['id'];
 $busqueda= $conn->prepare('SELECT * FROM users ');
